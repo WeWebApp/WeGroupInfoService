@@ -1,0 +1,11 @@
+{
+  "name": "WeGroupInfoService",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:WeWebApp/WeGroupInfoService.git",
+  "author": "ZDT@HP <dev@dthappy.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
