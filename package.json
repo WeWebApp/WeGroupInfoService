@@ -5,6 +5,12 @@
   "repository": "git@github.com:WeWebApp/WeGroupInfoService.git",
   "author": "ZDT@HP <dev@dthappy.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack:watch": "webpack -wd",
+    "nodemon": "nodemon server.js --exec babel-node",
+    "start": "npm-run-all --parallel webpack:watch nodemon"
+  },
   "dependencies": {
     "express": "^4.15.2"
   },
@@ -12,6 +18,8 @@
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-loader": "^6.4.0",
-    "babel-preset-env": "^1.2.1"
+    "babel-preset-env": "^1.2.1",
+    "nodemon": "^1.11.0",
+    "webpack": "^2.2.1"
   }
 }
