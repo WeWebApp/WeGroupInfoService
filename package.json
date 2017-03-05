@@ -12,7 +12,10 @@
     "start": "npm-run-all --parallel webpack:watch nodemon"
   },
   "dependencies": {
-    "express": "^4.15.2"
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
