@@ -7,7 +7,7 @@ apiRouter.get('/hello:id',(req,res)=>{
     res.send('Hello Api from ' + req.params.id);
 });
 
-apiRouter.get('/hello/:id',(req,res)=>{
+apiRouter.get('/news/items/:num',(req,res)=>{
     res.send('api '+req.params.id);
 });
 
