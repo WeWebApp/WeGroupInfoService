@@ -8,7 +8,7 @@ apiRouter.get('/hello:id',(req,res)=>{
 });
 
 apiRouter.get('/news/items/:num',(req,res)=>{
-    res.send('api '+req.params.id);
+    res.send('api '+req.params.num);
 });
 
 export default apiRouter;
