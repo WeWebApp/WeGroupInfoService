@@ -1,5 +1,5 @@
 import express from 'express';
-
+import ctrls from '../controllers';
 const apiRouter = express.Router();
 
 // get /api/hello123
@@ -8,6 +8,10 @@ apiRouter.get('/hello:id',(req,res)=>{
 });
 
 apiRouter.get('/news/items/:num',(req,res)=>{
+    ctrls.news.query(req.param.num).then((news)=>{
+        console.log(news);
+        //res.send(JSON.stringify(news));
+    });
     res.send('api '+req.params.num);
 });
 

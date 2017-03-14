@@ -4,7 +4,7 @@ const pageInfo = {
 }
 const newsControllers = {
     query(num){
-        dblib.connect().then((conn)=>{
+        return dblib.connect().then((conn)=>{
            return dblib.queryWith("news",num*pageInfo.itemNum,(num+1)*pageInfo.itemNum,conn);
         })
         .catch((error)=>{
@@ -12,3 +12,5 @@ const newsControllers = {
         })
     }
 }
+
+export default newsControllers;
