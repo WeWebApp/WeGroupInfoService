@@ -9,7 +9,7 @@ const newsControllers = {
         })
         .catch((error)=>{
             console.log(error);
-        })
+        });
     }
 }
 
