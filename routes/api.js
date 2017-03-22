@@ -13,7 +13,7 @@ apiRouter.get('/news/items/:num',(req,res)=>{
         //console.log(news);
         res.send(JSON.stringify(news));
     });
-    res.send('api '+req.params.num);
+    //res.send('api '+req.params.num);
 });
 
 export default apiRouter;
