@@ -1,7 +1,7 @@
 import dblib from '../lib/dblib';
 const pageInfo = {
     itemNum : 10
-}
+};
 const newsControllers = {
     query(num){
         return dblib.connect().then((conn)=>{
@@ -12,6 +12,6 @@ const newsControllers = {
             console.log(error);
         });
     }
-}
+};
 
 export default newsControllers;
