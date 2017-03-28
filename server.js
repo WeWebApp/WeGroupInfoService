@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import routes from './routes';
+import auth from './controllers/auth';
 
 const app = express();
 const port = 3000;
@@ -21,6 +22,10 @@ app.use(cookieParser());
 app.use((req, res, next) => {
   //console.log('Time: ', Date.now());
   console.log('Time: ',new Date());
+  // console.log(req);
+  if(!auth.allow(req.query.auth)){
+    throw new Error("API NOT ALLOWD!");
+  }
   next();
 });
 
@@ -28,8 +33,12 @@ app.use('/api',routes.api);
 
 app.use((err, req, res, next) => {
   res.status(err.status || 500);
-  res.render('error', {
+  res.send({
     message: err.message,
     error: err // {}
   });
+  // res.render('error', {
+  //   message: err.message,
+  //   error: err // {}
+  // });
 });
