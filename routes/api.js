@@ -8,9 +8,10 @@ apiRouter.get('/hello:id',(req,res)=>{
 });
 
 apiRouter.get('/news/items/:num',(req,res)=>{
-    ctrls.news.query(req.param.num).then((news)=>{
-        console.log(news);
-        //res.send(JSON.stringify(news));
+    //debugger
+    ctrls.news.query(req.params.num).then((news)=>{
+        //console.log(news);
+        res.send(JSON.stringify(news));
     });
     res.send('api '+req.params.num);
 });
