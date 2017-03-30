@@ -8,6 +8,7 @@ apiRouter.get('/hello:id',(req,res)=>{
 });
 
 apiRouter.get('/news/items/:num',(req,res)=>{
+    ctrls.auth.checkAllow(req);
     //debugger
     ctrls.news.query(req.params.num).then((news)=>{
         //console.log(news);

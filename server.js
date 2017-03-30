@@ -23,9 +23,6 @@ app.use((req, res, next) => {
   //console.log('Time: ', Date.now());
   console.log('Time: ',new Date());
   // console.log(req);
-  if(!auth.allow(req.query.auth)){
-    throw new Error("API NOT ALLOWD!");
-  }
   next();
 });
 
