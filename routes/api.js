@@ -16,4 +16,8 @@ apiRouter.get('/news/items/:num',(req,res)=>{
     //res.send('api '+req.params.num);
 });
 
+apiRouter.post('/news',(req,res)=>{
+
+});
+
 export default apiRouter;
