@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "initTables": "babel-node data/bootstrap",
     "webpack:watch": "webpack -wd",
     "nodemon": "nodemon --debug server.js --exec babel-node",
     "start": "npm-run-all --parallel webpack:watch nodemon"
